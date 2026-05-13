@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSC Community Library - Digital Library Management System</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>BOSC Community Library</h1>
+                <p class="tagline">Open-Source Digital Library Platform</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#bookmarks">My Bookmarks</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to BOSC Community Library</h2>
+            <p>Democratizing access to knowledge through open-source digital library solutions</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <h2>Search Resources</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by title, author, or keyword..." class="search-input">
+                <button class="btn btn-search" onclick="performSearch()">Search</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📚 Resource Management</h3>
+                    <p>Comprehensive cataloging system for e-books, research papers, and multimedia content</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Advanced Search</h3>
+                    <p>Full-text search with filters by category, language, and metadata</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Multi-Language Support</h3>
+                    <p>Available in 10+ languages with community translations</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📖 Personal Bookmarks</h3>
+                    <p>Create and organize personal bookshelves with bookmarking system</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Community Driven</h3>
+                    <p>Open governance with community voting on feature priorities</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Open & Transparent</h3>
+                    <p>Apache 2.0 licensed with open development and no vendor lock-in</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Showcase -->
+    <section class="resources" id="bookmarks">
+        <div class="container">
+            <h2>Featured Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>Introduction to Python Programming</h4>
+                    <p class="author">By Sarah Johnson</p>
+                    <p class="description">Comprehensive guide to Python programming for beginners and intermediate developers</p>
+                    <div class="card-footer">
+                        <span class="badge">Programming</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <h4>Digital Library Management Systems</h4>
+                    <p class="author">By Michael Chen</p>
+                    <p class="description">Exploration of modern library systems and best practices for digital resource management</p>
+                    <div class="card-footer">
+                        <span class="badge">Library Science</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <h4>Open Source Software Development</h4>
+                    <p class="author">By Emma Rodriguez</p>
+                    <p class="description">Guide to contributing to open-source projects and community governance</p>
+                    <div class="card-footer">
+                        <span class="badge">Open Source</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <h4>Machine Learning Fundamentals</h4>
+                    <p class="author">By David Kim</p>
+                    <p class="description">Introduction to machine learning concepts and practical implementation techniques</p>
+                    <div class="card-footer">
+                        <span class="badge">AI/ML</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <h4>Web Development Best Practices</h4>
+                    <p class="author">By Jessica Brown</p>
+                    <p class="description">Modern approaches to building responsive and accessible web applications</p>
+                    <div class="card-footer">
+                        <span class="badge">Web Development</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <h4>Data Science with Python</h4>
+                    <p class="author">By Thomas Wilson</p>
+                    <p class="description">Advanced data analysis and visualization techniques using Python libraries</p>
+                    <div class="card-footer">
+                        <span class="badge">Data Science</span>
+                        <button class="btn btn-small" onclick="addBookmark(this)">📌 Bookmark</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About BOSC Community Library</h2>
+            <p>BOSC Community Library is an open-source digital library management system designed for educational institutions, public libraries, and knowledge-sharing organizations. Built with open-source principles at its core, it provides a transparent, scalable, and accessible solution for managing and distributing digital resources.</p>
+            <h3>Our Mission</h3>
+            <p>To democratize access to knowledge by providing a free, open-source alternative to proprietary library management systems, ensuring that educational institutions worldwide can share and access digital resources without vendor lock-in.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BOSC Community Library. Licensed under Apache 2.0</p>
+            <p><a href="https://github.com/BOSC-Community-Library" target="_blank">View on GitHub</a> | <a href="#about">Documentation</a></p>
+        </div>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>

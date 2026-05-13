@@ -1,0 +1,445 @@
+/* ==========================================
+   BOSC Community Library - Main Stylesheet
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --success-color: #16a34a;
+    --warning-color: #ea580c;
+    --danger-color: #dc2626;
+    --light-bg: #f3f4f6;
+    --dark-bg: #111827;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   Navigation Bar
+   ========================================== */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.navbar-brand .tagline {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   Buttons
+   ========================================== */
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-search {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+}
+
+.btn-search:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-small:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================
+   Search Section
+   ========================================== */
+
+.search-section {
+    padding: 3rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.search-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.search-results {
+    margin-top: 2rem;
+    min-height: 100px;
+}
+
+.search-results p {
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* ==========================================
+   Features Section
+   ========================================== */
+
+.features {
+    padding: 4rem 2rem;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* ==========================================
+   Resources Section
+   ========================================== */
+
+.resources {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.resources h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.resource-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.resource-card .author {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.resource-card .description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   About Section
+   ========================================== */
+
+.about {
+    padding: 4rem 2rem;
+}
+
+.about .container {
+    max-width: 800px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.about p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .features-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .features h2,
+    .resources h2 {
+        font-size: 1.5rem;
+    }
+}

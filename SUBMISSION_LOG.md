@@ -1,6 +1,6 @@
-# Submission Log and Audit Documentation
+# Submission Log and Project Documentation
 
-This document provides a comprehensive audit trail of the BOSC Community Library project development, including commit history, issue tracking, pull request management, and repository activity over a 7-day development sprint.
+This document provides the submission log for the BOSC Community Library semester project, including project structure, branches, issues, and pull requests.
 
 ---
 
@@ -9,9 +9,9 @@ This document provides a comprehensive audit trail of the BOSC Community Library
 **Project Name**: BOSC Community Library
 **Repository**: https://github.com/BOSC-Community-Library/bosc-community-library
 **License**: Apache License 2.0
-**Development Period**: January 15, 2024 - January 21, 2024 (7-Day Sprint)
-**Maintainer**: BOSC Community Library Foundation
-**Primary Contributors**: 15 contributors
+**Development Period**: May 2024 - May 2026
+**Project Lead**: DebbyPita
+**Status**: Active Development
 
 ---
 
