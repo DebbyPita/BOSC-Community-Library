@@ -14,7 +14,7 @@ A modern, community-driven digital library platform designed for educational ins
 BOSC Community Library is an open-source digital library management system that enables organizations to:
 - Catalog and organize digital resources (e-books, research papers, multimedia, etc.)
 - Provide searchable access to educational content
-- Support multi-language communities
+- Support multi-language communities,
 - Enable collaborative resource curation
 - Maintain transparent governance and community ownership
 

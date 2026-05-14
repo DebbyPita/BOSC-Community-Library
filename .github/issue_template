@@ -1,0 +1,26 @@
+**Type of issue** (choose one):
+- [ ] Bug
+- [ ] Feature request
+- [ ] Documentation
+- [ ] Question / Support
+- [ ] Other
+
+**Priority** (optional):
+- [ ] Low
+- [ ] Medium
+- [ ] High
+- [ ] Critical
+
+**Description**
+What needs to be done? Be specific.
+
+**Acceptance criteria**
+- [ ] Criteria 1
+- [ ] Criteria 2
+- [ ] Criteria 3
+
+**Related issues / PRs** (optional)
+Link to related items: #123, #456
+
+**Environment / additional info**
+Any relevant details (OS, version, etc.)
