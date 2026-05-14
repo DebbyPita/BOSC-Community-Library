@@ -66,7 +66,26 @@ function addBookmark(button) {
     const card = button.closest('.resource-card');
     const title = card.querySelector('h4').textContent;
     const bookmarks = getBookmarks();
-    
+
+// Password validation function
+function validatePassword(password) {
+    if(password.length >= 8) {
+        return true; // Password is valid
+    } else {
+        alert('Password must be at least 8 characters');
+        return false;
+    }
+}
+    // Email validation function
+function validateEmail(email) {
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(emailPattern.test(email)) {
+        return true; // Email is valid
+    } else {
+        alert('Please enter a valid email address');
+        return false;
+    }
+} 
     // Check if already bookmarked
     if (!bookmarks.find(b => b.title === title)) {
         bookmarks.push({
