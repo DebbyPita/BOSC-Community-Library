@@ -99,6 +99,12 @@ function performSearch() {
         resource.category.toLowerCase().includes(query) ||
         resource.description.toLowerCase().includes(query)
     );
+function filterBooks(query) {
+    return resources.filter(book =>
+        book.title.toLowerCase().includes(query.toLowerCase()) ||
+        book.author.toLowerCase().includes(query.toLowerCase())
+    );
+}
     
     if (results.length === 0) {
         resultsDiv.innerHTML = `<p>No resources found matching "${query}"</p>`;
