@@ -67,6 +67,20 @@ function addBookmark(button) {
     const title = card.querySelector('h4').textContent;
     const bookmarks = getBookmarks();
 
+function borrowBook(button, resourceId) {
+    const resource = resources.find(r => r.id === resourceId);
+    
+    if (resource.copies > 0) {
+        resource.copies--;
+        button.textContent = '✓ Borrowed';
+        button.disabled = true;
+        alert(`"${resource.title}" borrowed successfully!`);
+        trackEvent('book_borrowed', { title: resource.title });
+    } else {
+        alert('Sorry, this resource is currently unavailable.');
+    }
+}
+    
 // Password validation function
 function validatePassword(password) {
     if(password.length >= 8) {
@@ -106,6 +120,7 @@ function performSearch() {
     const searchInput = document.getElementById('search-input');
     const query = searchInput.value.toLowerCase().trim();
     const resultsDiv = document.getElementById('search-results');
+    <button class="btn btn-small" onclick="borrowBook(this, ${resource.id})"> Borrow</button>
     
     if (!query) {
         resultsDiv.innerHTML = '<p>Please enter a search term</p>';
