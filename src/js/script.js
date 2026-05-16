@@ -127,6 +127,10 @@ function performSearch() {
         return;
     }
     
+    const totalBooks = books.length
+const activeUsers = users.length
+const overdueBooks = borrowed.filter(book => book.overdue)
+    
     const results = resources.filter(resource =>
         resource.title.toLowerCase().includes(query) ||
         resource.author.toLowerCase().includes(query) ||
