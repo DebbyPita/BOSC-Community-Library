@@ -16,7 +16,7 @@ BOSC-Community-Library/
 │       └── script.js            # Full JavaScript functionality
 ├── BRANCHES_ISSUES_PRS.md       # Document of 5 branches, issues, and PRs
 ├── README.md                    # Project overview
-├── LICENSE                      # Apache 2.0 License
+├── LICENSE                      # MIT License
 ├── CODE_OF_CONDUCT.md          # Community standards
 ├── CONTRIBUTING.md             # Contribution guidelines
 └── SUBMISSION_LOG.md           # Project submission log
